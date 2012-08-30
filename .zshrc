@@ -10,6 +10,18 @@ zmodload zsh/complist zsh/terminfo
 # shell variables
 #-----------------------------------
 export EDITOR=vim
+
+
+#-----------------------------------
+# version control in prompt
+#-----------------------------------
+autoload -Uz vcs_info
+
+# I really only use these version control systems
+zstyle ':vcs_info:*' enable git svn
+precmd() {
+	vcs_info
+}
  
 #-----------------------------------
 # Prompt found in https://github.com/MrElendig/dotfiles-alice/blob/master/.zshrc
@@ -37,6 +49,7 @@ setprompt () {
 	eval PR_HOST='${PR_GREEN}%M${PR_NO_COLOR}' # no SSH
 	fi
 	# set the prompt
+	RPROMPT=$'${vcs_info_msg_0_}'
 	PS1=$'${PR_CYAN}┌[${PR_USER}${PR_CYAN}@${PR_HOST}${PR_CYAN}]\n└[${PR_MAGENTA}%~${PR_CYAN}]${PR_USER_OP} '
 	PS2=$'%_>'
 }
