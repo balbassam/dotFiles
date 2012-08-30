@@ -112,3 +112,6 @@ alias pacman='pacman-color'
 
 # extention based
 alias -s c=vim
+
+#.git has been moved to .homegit
+alias hgit='git --git-dir=$HOME/.homegit --work-tree=$HOME'
