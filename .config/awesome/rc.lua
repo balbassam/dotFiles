@@ -7,9 +7,6 @@ require("beautiful")
 -- Notification library
 require("naughty")
 
--- make naughty popup on second monitor
---naughty.config.default_preset.screen           = 2
-
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -38,7 +35,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
 beautiful.init(awful.util.getdir("config") .. "/themes/redtheme/theme.lua")
-
+            
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
 editor = os.getenv("EDITOR") or "vim"
@@ -72,10 +69,9 @@ layouts =
 -- {{{ Tags
 -- Define a tag table which will hold all screen tags.
 tags = {
-  names  = { "main", "web", "chat", "game", "code", "office" },
-  layout = { layouts[1], layouts[3], layouts[3], layouts[1], layouts[2],
-             layouts[3]
-}}
+  names  = {  "web", "chat", "code", "office", "etc" },
+  layout = {  layouts[2], layouts[3], layouts[2], layouts[1], layouts[1] }
+}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
     tags[s] = awful.tag(tags.names, s, tags.layout)

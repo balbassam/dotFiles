@@ -31,5 +31,30 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
-exec awesome
+DEFAULT_SESSION=awesome
+
+case $1 in
+awesome)
+	exec ck-launch-session awesome
+	;;
+xfce4)
+	exec ck-launch-session xfce4-session 
+	;;
+icewm)
+	icewmbg &
+	icewmtray &
+	exec icewm
+	;;
+wmaker)
+	exec wmaker
+	;;
+blackbox)
+	exec blackbox
+	;;
+*)
+	exec $DEFAULT_SESSION
+	;;
+esac      
+
+export VDPAU_NVIDIA_NO_OVERLAY=1
 
