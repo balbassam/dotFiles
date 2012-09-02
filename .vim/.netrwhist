@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/usr/share/awesome/themes/redtheme'
 let g:netrw_dirhist_2='/home/gh0s1/.config/awesome/themes/redtheme'
 let g:netrw_dirhist_3='/home/gh0s1'
+let g:netrw_dirhist_4='/home/gh0s1/Dropbox/notes'

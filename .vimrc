@@ -35,6 +35,7 @@ set shiftwidth=4				" number of spaces to use for autoindenting
 set tabstop=4					" a tab is four spaces
 set smarttab					" insert tabs on the start of a line according to
 								"    shiftwidth, not tabstop
+set expandtab   				" Expand tabs into spaces
 set shiftround					" use multiple of shiftwidth when indenting with '<' and '>'
 
 set number						" always show line numbers
@@ -43,7 +44,7 @@ set ignorecase					" ignore case when searching
 set smartcase					" ignore case if search pattern is all lowercase,
 								"    case-sensitive otherwise
 set scrolloff=4					" keep 4 lines off the edges of the screen when scrolling
-set virtualedit=all             " allow the cursor to go in to "invalid" places
+" set virtualedit=all             " allow the cursor to go in to "invalid" places
 
 set hlsearch					" highlight search terms
 set incsearch					" show search matches as you type

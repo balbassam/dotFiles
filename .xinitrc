@@ -1,5 +1,5 @@
 #!/bin/sh
-#
+
 # ~/.xinitrc
 #
 # Executed by startx (run your window manager from here)
@@ -27,6 +27,8 @@ xset +fp /usr/share/fonts/local/
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
+
+export VDPAU_NVIDIA_NO_OVERLAY=1
 # exec gnome-session
 # exec startkde
 # exec startxfce4
@@ -56,5 +58,4 @@ blackbox)
 	;;
 esac      
 
-export VDPAU_NVIDIA_NO_OVERLAY=1
 
