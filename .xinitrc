@@ -43,17 +43,6 @@ awesome)
 xfce4)
 	exec ck-launch-session xfce4-session 
 	;;
-icewm)
-	icewmbg &
-	icewmtray &
-	exec icewm
-	;;
-wmaker)
-	exec wmaker
-	;;
-blackbox)
-	exec blackbox
-	;;
 *)
 	exec $DEFAULT_SESSION
 	;;

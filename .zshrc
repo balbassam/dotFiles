@@ -75,7 +75,7 @@ bindkey '^J' history-beginning-search-forward
 #-----------------------------------
 # Autocompletion stuff
 #-----------------------------------
-zstyle ':completion:*' menu select=long
+zstyle ':completion:*' menu select
 
 setopt glob_complete completealiases correct_all
 

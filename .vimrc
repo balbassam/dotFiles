@@ -21,18 +21,19 @@ let g:solarized_termtrans=1
 let g:solarized_visibility="low"
 colorscheme solarized
 
+
 " hide buffers without having to write on undo changes first
 set hidden
 
-" set nowrap						" don't wrap lines
+set wrap						" do wrap lines
 set backspace=indent,eol,start
 								" allow backspacing over everything in insert mode
 " indenting options
+set shiftwidth=4				" number of spaces to use for autoindenting
+set tabstop=4					" a tab is four spaces
 set autoindent					" always set autoindenting on
 set smartindent                 " indents for C like files
 set copyindent					" copy the previous indentation on autoindenting
-set shiftwidth=4				" number of spaces to use for autoindenting
-set tabstop=4					" a tab is four spaces
 set smarttab					" insert tabs on the start of a line according to
 								"    shiftwidth, not tabstop
 set expandtab   				" Expand tabs into spaces
@@ -62,6 +63,7 @@ set history=1000				" remember more commands and search history
 set undolevels=1000				" use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set title                       " change the terminal's title
+set ls=2                         "Show filename at bottom
 
 " for gods sake we have git now
 set nobackup
