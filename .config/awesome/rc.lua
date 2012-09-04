@@ -326,6 +326,10 @@ root.keys(globalkeys)
 -- {{{ Rules
 awful.rules.rules = {
     -- All clients will match this rule.
+
+    -- Youtube fix
+    { rule = { instance = "plugin-container" },
+  properties = { floating = true } },
     { rule = { },
       properties = { border_width = beautiful.border_width,
                      border_color = beautiful.border_normal,
@@ -378,7 +382,4 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 -- Auto start applications
 os.execute"dex -a -e Awesome"
 
--- Youtube fix
-{ rule = { instance = "plugin-container" },
-  properties = { floating = true } },
 
