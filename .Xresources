@@ -6,7 +6,7 @@ Xft.dpi:                    96
 Xft.antialias:              false
 Xft.rgba:                   rgb
 Xft.hinting:                true
-Xft.hintstyle:              hintslight
+Xft.hintstyle:              hintfull
 
 URxvt.depth:                32
 URxvt.geometry:             90x30
