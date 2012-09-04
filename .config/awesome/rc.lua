@@ -374,3 +374,11 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- Auto start applications
+os.execute"dex -a -e Awesome"
+
+-- Youtube fix
+{ rule = { instance = "plugin-container" },
+  properties = { floating = true } },
+
