@@ -11,6 +11,16 @@ zmodload zsh/complist zsh/terminfo
 #-----------------------------------
 export EDITOR=vim
 
+#-----------------------------------
+# colors are nice
+#-----------------------------------
+
+# make some aliases for the colours: (coud use normal escap.seq's too)
+for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
+eval PR_$color='%{$fg[${(L)color}]%}'
+done
+PR_NO_COLOR="%{$terminfo[sgr0]%}"
+
 
 #-----------------------------------
 # version control in prompt
@@ -19,6 +29,11 @@ autoload -Uz vcs_info
 
 # I really only use these version control systems
 zstyle ':vcs_info:*' enable git svn
+
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' stagedstr '!'
+zstyle ':vcs_info:*' unstagedstr '?' 
+zstyle ':vcs_info:*' formats "${PR_CYAN}(%s)-[%b] %m%u%c% "
 precmd() {
 	vcs_info
 }
@@ -27,11 +42,6 @@ precmd() {
 # Prompt found in https://github.com/MrElendig/dotfiles-alice/blob/master/.zshrc
 #-----------------------------------
 setprompt () {
-	# make some aliases for the colours: (coud use normal escap.seq's too)
-	for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
-	eval PR_$color='%{$fg[${(L)color}]%}'
-	done
-	PR_NO_COLOR="%{$terminfo[sgr0]%}"
 
 	# Check the UID
 	if [[ $UID -ge 1000 ]]; then # normal user
