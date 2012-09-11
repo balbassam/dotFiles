@@ -33,7 +33,7 @@ zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' stagedstr '!'
 zstyle ':vcs_info:*' unstagedstr '?' 
-zstyle ':vcs_info:*' formats "${PR_CYAN}(%s)-[%b] %m%u%c% "
+zstyle ':vcs_info:*' formats "${PR_CYAN}(%s)-[%b] %m%u%c% ${PR_NO_COLOR}"
 precmd() {
 	vcs_info
 }
