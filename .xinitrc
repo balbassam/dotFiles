@@ -38,10 +38,10 @@ DEFAULT_SESSION=awesome
 
 case $1 in
 awesome)
-	exec ck-launch-session awesome
+	exec awesome
 	;;
 xfce4)
-	exec ck-launch-session xfce4-session 
+	exec xfce4-session 
 	;;
 *)
 	exec $DEFAULT_SESSION
