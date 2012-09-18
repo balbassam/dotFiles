@@ -139,3 +139,6 @@ alias -s c=vim
 
 #.git has been moved to .homegit
 alias hgit='git --git-dir=$HOME/.homegit --work-tree=$HOME'
+
+#Stop sudo from being corrected
+alias sudo='nocorrect sudo'
