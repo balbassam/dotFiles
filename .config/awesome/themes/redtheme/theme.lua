@@ -4,7 +4,7 @@
 
 theme = {}
 
-theme.font          = "sans 8"
+theme.font          = "terminus 8"
 
 theme.bg_normal     = "#222222"
 theme.bg_focus      = "#535d6c"
@@ -32,15 +32,15 @@ theme.border_marked = "#91231c"
 --theme.taglist_bg_focus = "#ff0000"
 
 -- Display the taglist squares
-theme.taglist_squares_sel   = "/home/gh0s1/.config/awesome/themes/redtheme/taglist/squarefw.png"
-theme.taglist_squares_unsel = "/home/gh0s1/.config/awesome/themes/redtheme/taglist/squarew.png"
+theme.taglist_squares_sel   = "~/.config/awesome/themes/redtheme/taglist/squarefw.png"
+theme.taglist_squares_unsel = "~/.config/awesome/themes/redtheme/taglist/squarew.png"
 
-theme.tasklist_floating_icon = "/home/gh0s1/.config/awesome/themes/redtheme/tasklist/floatingw.png"
+theme.tasklist_floating_icon = "~/.config/awesome/themes/redtheme/tasklist/floatingw.png"
 
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
-theme.menu_submenu_icon = "/home/gh0s1/.config/awesome/themes/redtheme/submenu.png"
+theme.menu_submenu_icon = "~/.config/awesome/themes/redtheme/submenu.png"
 theme.menu_height = "15"
 theme.menu_width  = "100"
 
@@ -50,47 +50,47 @@ theme.menu_width  = "100"
 --theme.bg_widget = "#cc0000"
 
 -- Define the image to load
-theme.titlebar_close_button_normal = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/close_normal.png"
-theme.titlebar_close_button_focus  = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/close_focus.png"
+theme.titlebar_close_button_normal = "~/.config/awesome/themes/redtheme/titlebar/close_normal.png"
+theme.titlebar_close_button_focus  = "~/.config/awesome/themes/redtheme/titlebar/close_focus.png"
 
-theme.titlebar_ontop_button_normal_inactive = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/ontop_normal_inactive.png"
-theme.titlebar_ontop_button_focus_inactive  = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/ontop_focus_inactive.png"
-theme.titlebar_ontop_button_normal_active = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/ontop_normal_active.png"
-theme.titlebar_ontop_button_focus_active  = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/ontop_focus_active.png"
+theme.titlebar_ontop_button_normal_inactive = "~/.config/awesome/themes/redtheme/titlebar/ontop_normal_inactive.png"
+theme.titlebar_ontop_button_focus_inactive  = "~/.config/awesome/themes/redtheme/titlebar/ontop_focus_inactive.png"
+theme.titlebar_ontop_button_normal_active = "~/.config/awesome/themes/redtheme/titlebar/ontop_normal_active.png"
+theme.titlebar_ontop_button_focus_active  = "~/.config/awesome/themes/redtheme/titlebar/ontop_focus_active.png"
 
-theme.titlebar_sticky_button_normal_inactive = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/sticky_normal_inactive.png"
-theme.titlebar_sticky_button_focus_inactive  = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/sticky_focus_inactive.png"
-theme.titlebar_sticky_button_normal_active = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/sticky_normal_active.png"
-theme.titlebar_sticky_button_focus_active  = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/sticky_focus_active.png"
+theme.titlebar_sticky_button_normal_inactive = "~/.config/awesome/themes/redtheme/titlebar/sticky_normal_inactive.png"
+theme.titlebar_sticky_button_focus_inactive  = "~/.config/awesome/themes/redtheme/titlebar/sticky_focus_inactive.png"
+theme.titlebar_sticky_button_normal_active = "~/.config/awesome/themes/redtheme/titlebar/sticky_normal_active.png"
+theme.titlebar_sticky_button_focus_active  = "~/.config/awesome/themes/redtheme/titlebar/sticky_focus_active.png"
 
-theme.titlebar_floating_button_normal_inactive = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/floating_normal_inactive.png"
-theme.titlebar_floating_button_focus_inactive  = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/floating_focus_inactive.png"
-theme.titlebar_floating_button_normal_active = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/floating_normal_active.png"
-theme.titlebar_floating_button_focus_active  = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/floating_focus_active.png"
+theme.titlebar_floating_button_normal_inactive = "~/.config/awesome/themes/redtheme/titlebar/floating_normal_inactive.png"
+theme.titlebar_floating_button_focus_inactive  = "~/.config/awesome/themes/redtheme/titlebar/floating_focus_inactive.png"
+theme.titlebar_floating_button_normal_active = "~/.config/awesome/themes/redtheme/titlebar/floating_normal_active.png"
+theme.titlebar_floating_button_focus_active  = "~/.config/awesome/themes/redtheme/titlebar/floating_focus_active.png"
 
-theme.titlebar_maximized_button_normal_inactive = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/maximized_normal_inactive.png"
-theme.titlebar_maximized_button_focus_inactive  = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/maximized_focus_inactive.png"
-theme.titlebar_maximized_button_normal_active = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/maximized_normal_active.png"
-theme.titlebar_maximized_button_focus_active  = "/home/gh0s1/.config/awesome/themes/redtheme/titlebar/maximized_focus_active.png"
+theme.titlebar_maximized_button_normal_inactive = "~/.config/awesome/themes/redtheme/titlebar/maximized_normal_inactive.png"
+theme.titlebar_maximized_button_focus_inactive  = "~/.config/awesome/themes/redtheme/titlebar/maximized_focus_inactive.png"
+theme.titlebar_maximized_button_normal_active = "~/.config/awesome/themes/redtheme/titlebar/maximized_normal_active.png"
+theme.titlebar_maximized_button_focus_active  = "~/.config/awesome/themes/redtheme/titlebar/maximized_focus_active.png"
 
 -- You can use your own command to set your wallpaper
-theme.wallpaper_cmd = { "awsetbg /home/gh0s1/.config/awesome/themes/redtheme/pixels.jpg" }
+theme.wallpaper_cmd = { "awsetbg -f .config/awesome/themes/redtheme/pixels.jpg" }
 
 -- You can use your own layout icons like this:
-theme.layout_fairh = "/home/gh0s1/.config/awesome/themes/redtheme/layouts/fairhw.png"
-theme.layout_fairv = "/home/gh0s1/.config/awesome/themes/redtheme/layouts/fairvw.png"
-theme.layout_floating  = "/home/gh0s1/.config/awesome/themes/redtheme/layouts/floatingw.png"
-theme.layout_magnifier = "/home/gh0s1/.config/awesome/themes/redtheme/layouts/magnifierw.png"
-theme.layout_max = "/home/gh0s1/.config/awesome/themes/redtheme/layouts/maxw.png"
-theme.layout_fullscreen = "/home/gh0s1/.config/awesome/themes/redtheme/layouts/fullscreenw.png"
-theme.layout_tilebottom = "/home/gh0s1/.config/awesome/themes/redtheme/layouts/tilebottomw.png"
-theme.layout_tileleft   = "/home/gh0s1/.config/awesome/themes/redtheme/layouts/tileleftw.png"
-theme.layout_tile = "/home/gh0s1/.config/awesome/themes/redtheme/layouts/tilew.png"
-theme.layout_tiletop = "/home/gh0s1/.config/awesome/themes/redtheme/layouts/tiletopw.png"
-theme.layout_spiral  = "/home/gh0s1/.config/awesome/themes/redtheme/layouts/spiralw.png"
-theme.layout_dwindle = "/home/gh0s1/.config/awesome/themes/redtheme/layouts/dwindlew.png"
+theme.layout_fairh = "~/.config/awesome/themes/redtheme/layouts/fairhw.png"
+theme.layout_fairv = "~/.config/awesome/themes/redtheme/layouts/fairvw.png"
+theme.layout_floating  = "~/.config/awesome/themes/redtheme/layouts/floatingw.png"
+theme.layout_magnifier = "~/.config/awesome/themes/redtheme/layouts/magnifierw.png"
+theme.layout_max = "~/.config/awesome/themes/redtheme/layouts/maxw.png"
+theme.layout_fullscreen = "~/.config/awesome/themes/redtheme/layouts/fullscreenw.png"
+theme.layout_tilebottom = "~/.config/awesome/themes/redtheme/layouts/tilebottomw.png"
+theme.layout_tileleft   = "~/.config/awesome/themes/redtheme/layouts/tileleftw.png"
+theme.layout_tile = "~/.config/awesome/themes/redtheme/layouts/tilew.png"
+theme.layout_tiletop = "~/.config/awesome/themes/redtheme/layouts/tiletopw.png"
+theme.layout_spiral  = "~/.config/awesome/themes/redtheme/layouts/spiralw.png"
+theme.layout_dwindle = "~/.config/awesome/themes/redtheme/layouts/dwindlew.png"
 
-theme.awesome_icon = "/home/gh0s1/.config/awesome/icons/awesome16.png"
+theme.awesome_icon = "~/.config/awesome/icons/awesome16.png"
 
 return theme
 -- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80
