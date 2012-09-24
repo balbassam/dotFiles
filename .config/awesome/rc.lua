@@ -392,3 +392,4 @@ end
 run_once("nm-applet")
 run_once("dropboxd")
 run_once("xfce4-power-manager")
+run_once("conky")

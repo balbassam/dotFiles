@@ -15,6 +15,7 @@ URxvt.fading:               0
 ! URxvt.urgentOnBell:         true
 ! URxvt.visualBell:           true
 URxvt.loginShell:           true
+URxvt.termName:             xterm
 URxvt.saveLines:            50
 URxvt.internalBorder:       3
 URxvt.lineSpace:            0
