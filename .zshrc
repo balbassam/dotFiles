@@ -82,6 +82,10 @@ bindkey "^[[B" history-beginning-search-forward
 bindkey '^K' history-beginning-search-backward
 bindkey '^J' history-beginning-search-forward
 
+# Enable home and end keys
+bindkey "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
+
 #-----------------------------------
 # Autocompletion stuff
 #-----------------------------------

@@ -15,11 +15,14 @@ URxvt.fading:               0
 ! URxvt.urgentOnBell:         true
 ! URxvt.visualBell:           true
 URxvt.loginShell:           true
-URxvt.termName:             xterm
+URxvt.termName:             rxvt-unicode
 URxvt.saveLines:            50
 URxvt.internalBorder:       3
 URxvt.lineSpace:            0
 
+! Enable home and end keys
+URxvt*keysym.Home: \033[1~
+URxvt*keysym.End: \033[4~
 ! Fonts
 URxvt.allow_bold:           true
 urxvt*font:     -*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*
