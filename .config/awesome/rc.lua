@@ -69,8 +69,8 @@ layouts =
 -- {{{ Tags
 -- Define a tag table which will hold all screen tags.
 tags = {
-  names  = {  "web", "chat", "code", "office", "etc" },
-  layout = {  layouts[2], layouts[3], layouts[2], layouts[1], layouts[1] }
+  names  = {  "[1] web",  "[2] chat", "[3] code", "[4] office","[5] VM",   "[6] ..." },
+  layout = {  layouts[2], layouts[5], layouts[2], layouts[1],  layouts[10], layouts[1] }
 }
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
@@ -390,7 +390,6 @@ function run_once(cmd)
 end
 
 run_once("nm-applet")
-run_once("dropboxd")
+--run_once("dropboxd")
 run_once("xfce4-power-manager")
 run_once("conky")
--- run_once("xfsettingsd")
