@@ -137,6 +137,7 @@ bindkey -e
 #-----------------------------------
 # Global
 alias pacman='pacman-color'
+alias ls='ls --color=auto'
 
 # extention based
 alias -s c=vim
