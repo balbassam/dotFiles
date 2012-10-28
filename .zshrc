@@ -35,7 +35,7 @@ zstyle ':vcs_info:*' stagedstr '!'
 zstyle ':vcs_info:*' unstagedstr '?' 
 zstyle ':vcs_info:*' formats "${PR_CYAN}(%s)-[%b] %m%u%c% ${PR_NO_COLOR}"
 precmd() {
-	vcs_info
+    vcs_info
 }
  
 #-----------------------------------
@@ -43,25 +43,25 @@ precmd() {
 #-----------------------------------
 setprompt () {
 
-	# Check the UID
-	if [[ $UID -ge 1000 ]]; then # normal user
-	eval PR_USER='${PR_GREEN}%n${PR_NO_COLOR}'
-	eval PR_USER_OP='${PR_GREEN}%#${PR_NO_COLOR}'
-	elif [[ $UID -eq 0 ]]; then # root
-	eval PR_USER='${PR_RED}%n${PR_NO_COLOR}'
-	eval PR_USER_OP='${PR_RED}%#${PR_NO_COLOR}'
-	fi	
+    # Check the UID
+    if [[ $UID -ge 1000 ]]; then # normal user
+    eval PR_USER='${PR_GREEN}%n${PR_NO_COLOR}'
+    eval PR_USER_OP='${PR_GREEN}%#${PR_NO_COLOR}'
+    elif [[ $UID -eq 0 ]]; then # root
+    eval PR_USER='${PR_RED}%n${PR_NO_COLOR}'
+    eval PR_USER_OP='${PR_RED}%#${PR_NO_COLOR}'
+    fi  
 
-	# Check if we are on SSH or not
-	if [[ -n "$SSH_CLIENT" || -n "$SSH2_CLIENT" ]]; then
-	eval PR_HOST='${PR_YELLOW}%M${PR_NO_COLOR}' #SSH
-	else
-	eval PR_HOST='${PR_GREEN}%M${PR_NO_COLOR}' # no SSH
-	fi
-	# set the prompt
-	RPROMPT=$'${vcs_info_msg_0_}'
-	PS1=$'${PR_CYAN}┌[${PR_USER}${PR_CYAN}@${PR_HOST}${PR_CYAN}]\n└[${PR_MAGENTA}%~${PR_CYAN}]${PR_USER_OP} '
-	PS2=$'%_>'
+    # Check if we are on SSH or not
+    if [[ -n "$SSH_CLIENT" || -n "$SSH2_CLIENT" ]]; then
+    eval PR_HOST='${PR_YELLOW}%M${PR_NO_COLOR}' #SSH
+    else
+    eval PR_HOST='${PR_GREEN}%M${PR_NO_COLOR}' # no SSH
+    fi
+    # set the prompt
+    RPROMPT=$'${vcs_info_msg_0_}'
+    PS1=$'${PR_CYAN}┌[${PR_USER}${PR_CYAN}@${PR_HOST}${PR_CYAN}]\n└[${PR_MAGENTA}%~${PR_CYAN}]${PR_USER_OP} '
+    PS2=$'%_>'
 }
 setprompt
 
