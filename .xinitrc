@@ -35,14 +35,12 @@ export VDPAU_NVIDIA_NO_OVERLAY=1
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
-DEFAULT_SESSION=awesome
+DEFAULT_SESSION=startxfce4
 
 case $1 in
-awesome)
-	exec awesome
-	;;
 xfce4)
-	exec xfce4-session 
+    exec startxfce4
+	# exec xfce4-session 
 	;;
 *)
 	exec $DEFAULT_SESSION

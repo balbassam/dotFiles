@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/usr/share/awesome/themes/redtheme'
-let g:netrw_dirhist_2='/home/gh0s1/.config/awesome/themes/redtheme'
-let g:netrw_dirhist_3='/home/gh0s1'
-let g:netrw_dirhist_4='/home/gh0s1/Dropbox/notes'
-let g:netrw_dirhist_5='/home/gh0s1'
-let g:netrw_dirhist_6='/home/gh0s1/.fontconfig'
-let g:netrw_dirhist_7='/home/gh0s1/test'
-let g:netrw_dirhist_8='/home/gh0s1/.urxvt'
-let g:netrw_dirhist_9='/'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/gh0s1/Dropbox/notes/stuffToGet'
