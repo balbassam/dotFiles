@@ -91,7 +91,7 @@ bindkey "^[[4~" end-of-line
 #-----------------------------------
 zstyle ':completion:*' menu select
 
-setopt glob_complete completealiases correct_all
+setopt glob_complete completealiases correct_all autocd
 
 #-----------------------------------
 # Keybindings
@@ -129,8 +129,6 @@ bindkey -M menuselect 'j' vi-down-line-or-history # bottom
 
 #use emacs style key navigation
 bindkey -e
-
-
 
 #-----------------------------------
 #alias's
