@@ -13,6 +13,9 @@ filetype plugin indent on
 " enable syntax highlighting
 syntax enable
 
+" enable folding (wrapping text)
+set foldmethod=syntax
+
 " I like dark themes so...
 set background=dark
 
