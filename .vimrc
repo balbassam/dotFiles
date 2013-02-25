@@ -10,6 +10,10 @@ call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 
+" Stuff for vimLatex
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
+
 " enable syntax highlighting
 syntax enable
 
