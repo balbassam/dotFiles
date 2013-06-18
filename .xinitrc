@@ -33,17 +33,17 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export VDPAU_NVIDIA_NO_OVERLAY=1
 # exec gnome-session
 # exec startkde
-# exec startxfce4
 # ...or the Window Manager of your choice
-DEFAULT_SESSION=xfce4-session
+#   DEFAULT_SESSION=xfce4-session
 
-case $1 in
-xfce4)
-	exec xfce4-session 
-	;;
-*)
-	exec $DEFAULT_SESSION
-	;;
-esac      
+#   case $1 in
+#   xfce4)
+#       exec xfce4-session 
+#       ;;
+#   *)
+#       exec $DEFAULT_SESSION
+#       ;;
+#   esac      
 
+exec startxfce4
 
