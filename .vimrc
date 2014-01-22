@@ -7,7 +7,7 @@ set nocompatible
 " plugins under the ~/.vim/bundle directory
 filetype off
 call pathogen#helptags()
-call pathogen#incubate()
+call pathogen#infect()
 filetype plugin indent on
 
 " Stuff for vimLatex
