@@ -39,7 +39,7 @@ set backspace=indent,eol,start
 set shiftwidth=4                " number of spaces to use for autoindenting
 set tabstop=4                   " a tab is four spaces
 set autoindent                  " always set autoindenting on
-set smartindent                 " indents for C like files
+set cindent                 " indents for C like files
 set copyindent                  " copy the previous indentation on autoindenting
 set smarttab                    " insert tabs on the start of a line according to
                                 "    shiftwidth, not tabstop
