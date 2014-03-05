@@ -21,6 +21,10 @@ eval PR_$color='%{$fg[${(L)color}]%}'
 done
 PR_NO_COLOR="%{$terminfo[sgr0]%}"
 
+# https://github.com/seebi/dircolors-solarized
+# Also a repo in the AUR
+eval `dircolors /etc/dir_colors `
+
 
 #-----------------------------------
 # version control in prompt
