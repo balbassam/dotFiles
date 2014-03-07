@@ -28,6 +28,9 @@ let g:solarized_termtrans=1
 let g:solarized_visibility="low"
 colorscheme solarized
 
+" For arduino syntax!
+autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
+
 
 " hide buffers without having to write on undo changes first
 set hidden
