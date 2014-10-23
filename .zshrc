@@ -131,6 +131,9 @@ bindkey -M menuselect 'k' vi-up-line-or-history   # up
 bindkey -M menuselect 'l' vi-forward-char         # right
 bindkey -M menuselect 'j' vi-down-line-or-history # bottom
 
+# Enable backwards tab using shift-tab
+bindkey -M menuselect '^[[Z' reverse-menu-complete
+
 #use emacs style key navigation
 bindkey -e
 
