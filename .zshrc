@@ -148,7 +148,8 @@ alias pacman='pacman --color=auto'
 alias -s c=vim
 
 #.git has been moved to .homegit
-alias hgit='git --git-dir=$HOME/.homegit --work-tree=$HOME'
+#alias hgit='git --git-dir=$HOME/.homegit --work-tree=$HOME'
+#I am using symlinks now 
 
 #Stop sudo from being corrected
 alias sudo='nocorrect sudo'
