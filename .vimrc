@@ -22,8 +22,8 @@ syntax enable
 " enable folding (wrapping text)
 set foldmethod=syntax
 
-" I like dark themes so...
-set background=dark
+" Testing out light for now...
+set background=light
 
 " Found this colorscheme and I liked it.
 let g:solarized_termtrans=1
