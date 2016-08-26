@@ -22,8 +22,9 @@ done
 PR_NO_COLOR="%{$terminfo[sgr0]%}"
 
 # https://github.com/seebi/dircolors-solarized
-# Also a repo in the AUR
-eval `dircolors /etc/dir_colors `
+# Have the files as a submodule
+# symlink to the correct file in dotFiles/dircolors-solarized
+eval `dircolors ~/.dircolors`
 
 
 #-----------------------------------
