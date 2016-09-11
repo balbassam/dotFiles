@@ -34,7 +34,6 @@ colorscheme solarized
 " For arduino syntax!
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 
-
 " hide buffers without having to write on undo changes first
 set hidden
 
@@ -50,9 +49,10 @@ set copyindent                  " copy the previous indentation on autoindenting
 set smarttab                    " insert tabs on the start of a line according to
                                 "    shiftwidth, not tabstop
 set expandtab                   " Expand tabs into spaces
-set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
+set shiftround                  " use multiple of shiftwidth when indenting with '<'or'>'
 
 set number                      " always show line numbers
+set relativenumber              " relative line numbers on the left
 set showmatch                   " set show matching parenthesis
 set ignorecase                  " ignore case when searching
 set smartcase                   " ignore case if search pattern is all lowercase,
@@ -70,7 +70,6 @@ set mouse=a                     " enable using the mouse if terminal emulator
                                 "    supports it (xterm does and urxvt)
 set fileformats="unix,dos,mac"
 set formatoptions+=1            " When wrapping paragraphs, don't end lines
-
 
 set history=1000                " remember more commands and search history
 set undolevels=1000             " use many muchos levels of undo
