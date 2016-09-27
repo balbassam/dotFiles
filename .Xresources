@@ -21,11 +21,11 @@ URxvt.internalBorder:       3
 URxvt.lineSpace:            0
 
 ! Enable home and end keys
-URxvt*keysym.Home: \033[1~
-URxvt*keysym.End: \033[4~
+URxvt*keysym.Home:          \033[1~
+URxvt*keysym.End:           \033[4~
 ! Fonts
 URxvt.allow_bold:           true
-urxvt*font:     -*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*
+URxvt*font:                 xft:hack:size=10:antialias=true
 
 !-------------------------------------------------------------------------------
 ! Color settings 
@@ -113,7 +113,6 @@ URxvt*color14:               S_base1
 URxvt*color7:                S_base2
 URxvt*color15:               S_base3
 
-
 !
 ! Man page styling
 URxvt.colorIT:      #87af5f
@@ -136,4 +135,3 @@ URxvt.cursorUnderline:      false
 
 ! Pointer
 URxvt.pointerBlank:         true
-
