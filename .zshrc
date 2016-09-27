@@ -4,6 +4,8 @@ promptinit
 colors
 setopt prompt_subst 
 
+
+
 zmodload zsh/complist zsh/terminfo
 
 #-----------------------------------
@@ -95,6 +97,7 @@ bindkey "^[[4~" end-of-line
 # Autocompletion stuff
 #-----------------------------------
 zstyle ':completion:*' menu select
+zstyle ':completion:*' rehash true
 
 setopt glob_complete completealiases correct_all autocd
 
