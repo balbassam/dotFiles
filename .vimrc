@@ -57,6 +57,8 @@ set showmatch                   " set show matching parenthesis
 set ignorecase                  " ignore case when searching
 set smartcase                   " ignore case if search pattern is all lowercase,
                                 "    case-sensitive otherwise
+set cursorline                  " hightlights current cursor"
+set colorcolumn=80              " vertical line at the 80 char position
 set scrolloff=4                 " keep 4 lines off the edges of the screen when scrolling
 " set virtualedit=all             " allow the cursor to go in to "invalid" places
 
