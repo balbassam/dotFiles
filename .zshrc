@@ -79,7 +79,7 @@ setprompt
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.history
-# append all history into the shared file ignoreing space and duplicates
+# append all history into the shared file ignoring space and duplicates
 setopt append_history share_history histignorealldups histignorespace
 # history search
 bindkey "^[[A" history-beginning-search-backward
