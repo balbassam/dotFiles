@@ -28,7 +28,7 @@ set background=dark
 
 " Found this colorscheme and I liked it.
 let g:solarized_termtrans=1
-let g:solarized_visibility="low"
+let g:solarized_visibility="high"
 colorscheme solarized
 
 " For arduino syntax!
