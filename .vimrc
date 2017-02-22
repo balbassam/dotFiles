@@ -78,6 +78,7 @@ set undolevels=1000             " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set title                       " change the terminal's title
 set ls=2                         "Show filename at bottom
+match ErrorMsg '\s\+$'          " Show trailing whitespace
 
 " for gods sake we have git now
 set nobackup
