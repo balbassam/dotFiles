@@ -11,8 +11,8 @@ URxvt.depth:                32
 URxvt.geometry:             90x30
 ! URxvt.transparent:          false
 URxvt.fading:               0
-! URxvt.urgentOnBell:         true
-! URxvt.visualBell:           true
+URxvt.urgentOnBell:         true
+URxvt.visualBell:           true
 URxvt.loginShell:           true
 URxvt.termName:             rxvt-unicode
 URxvt.saveLines:            3000
@@ -25,13 +25,13 @@ URxvt*keysym.End:           \033[4~
 ! Fonts
 URxvt.allow_bold:           true
 ! Search multiple fonts to allow for unicode glyphs
-URxvt*font:                 xft:hack:size=10:antialias=true,\
+URxvt.font:                 xft:hack:size=8:antialias=true,\
                             xft:WenQuanYi Bitmap Song:size=8,\
                             xft:FreeSerif:style=Regular,\
                             xft:unifont:style=Medium:antialias=false
 
 !-------------------------------------------------------------------------------
-! Color settings 
+! Color settings
 !-------------------------------------------------------------------------------
 !! drop in Solarized colorscheme for Xresources
 !!
@@ -116,7 +116,6 @@ URxvt*color14:               S_base1
 URxvt*color7:                S_base2
 URxvt*color15:               S_base3
 
-!
 ! Man page styling
 URxvt.colorIT:      #87af5f
 URxvt.colorBD:      #d7d7d7
@@ -127,7 +126,7 @@ URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
 ! Perl extensions
-URxvt.perl-ext-common:      default,matcher
+URxvt.perl-ext-common:      default,matcher,clipboard,resize-font
 URxvt.matcher.button:       1
 URxvt.url-launcher:         /usr/bin/xdg-open
 
@@ -138,3 +137,7 @@ URxvt.cursorUnderline:      false
 
 ! Pointer
 URxvt.pointerBlank:         true
+
+! Copy paste
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
