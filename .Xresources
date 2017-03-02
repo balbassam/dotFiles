@@ -25,10 +25,11 @@ URxvt*keysym.End:           \033[4~
 ! Fonts
 URxvt.allow_bold:           true
 ! Search multiple fonts to allow for unicode glyphs
-URxvt.font:                 xft:hack:size=8:antialias=true,\
-                            xft:WenQuanYi Bitmap Song:size=8,\
+URxvt*font:                 xft:Hack:size=8:antialias=true,\
+                            xft:Unifont:style=Medium:antialias=true,\
+                            xft:Symbola,\
                             xft:FreeSerif:style=Regular,\
-                            xft:unifont:style=Medium:antialias=false
+                            xft:WenQuanYi Bitmap Song:size=8,\
 
 !-------------------------------------------------------------------------------
 ! Color settings
