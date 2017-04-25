@@ -1,8 +1,8 @@
-autoload -U compinit promptinit colors 
+autoload -U compinit promptinit colors
 compinit
 promptinit
 colors
-setopt prompt_subst 
+setopt prompt_subst
 
 
 
@@ -39,12 +39,12 @@ zstyle ':vcs_info:*' enable git svn
 
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' stagedstr '!'
-zstyle ':vcs_info:*' unstagedstr '?' 
+zstyle ':vcs_info:*' unstagedstr '?'
 zstyle ':vcs_info:*' formats "${PR_CYAN}(%s)-[%b] %m%u%c% ${PR_NO_COLOR}"
 precmd() {
     vcs_info
 }
- 
+
 #-----------------------------------
 # Prompt found in https://github.com/MrElendig/dotfiles-alice/blob/master/.zshrc
 #-----------------------------------
@@ -153,7 +153,7 @@ alias -s c=vim
 
 #.git has been moved to .homegit
 #alias hgit='git --git-dir=$HOME/.homegit --work-tree=$HOME'
-#I am using symlinks now 
+#I am using symlinks now
 
 #Stop sudo from being corrected
 alias sudo='nocorrect sudo'
