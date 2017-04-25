@@ -1,3 +1,1 @@
-set disassembly-flavor intel
-set height 0
-set width 0
+source /usr/share/peda/peda.py
