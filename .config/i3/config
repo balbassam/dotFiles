@@ -67,7 +67,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-# bindsym $mod+d focus child
+bindsym $mod+z focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -194,6 +194,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightnes
 exec feh --bg-scale ~/.config/i3/Wallpaper.jpg
 exec --no-startup-id dropbox start
 exec --no-startup-id xflux -z 47906
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # color setup
 client.focused          #3F8AC2 #096BAA #00BAA7 #00DA8E
