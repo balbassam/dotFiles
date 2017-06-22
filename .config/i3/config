@@ -99,7 +99,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 #
 # Shutdown, reboot, and lock
-set $Locker i3lock -i .config/i3/lockscreen.png && sleep 1
+set $Locker i3lock -t -i .config/i3/lockscreen.png && sleep 1
 
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
