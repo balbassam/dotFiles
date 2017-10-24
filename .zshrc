@@ -57,7 +57,7 @@ setprompt () {
     elif [[ $UID -eq 0 ]]; then # root
     eval PR_USER='${PR_RED}%n${PR_NO_COLOR}'
     eval PR_USER_OP='${PR_RED}%#${PR_NO_COLOR}'
-    fi  
+    fi
 
     # Check if we are on SSH or not
     if [[ -n "$SSH_CLIENT" || -n "$SSH2_CLIENT" ]]; then
@@ -157,3 +157,6 @@ alias -s c=vim
 
 #Stop sudo from being corrected
 alias sudo='nocorrect sudo'
+
+transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
+tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }

@@ -191,10 +191,9 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Startup programs
-exec feh --bg-scale ~/.config/i3/Wallpaper.jpg
-exec --no-startup-id dropbox start
-exec --no-startup-id xflux -z 47906
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec feh --bg-fill ~/.config/i3/Wallpaper.jpg
+exec --no-startup-id dropbox start
 
 # color setup
 client.focused          #3F8AC2 #096BAA #00BAA7 #00DA8E
