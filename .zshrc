@@ -151,12 +151,23 @@ alias pacman='pacman --color=auto'
 # extention based
 alias -s c=vim
 
-#.git has been moved to .homegit
-#alias hgit='git --git-dir=$HOME/.homegit --work-tree=$HOME'
-#I am using symlinks now
-
 #Stop sudo from being corrected
 alias sudo='nocorrect sudo'
 
+#-----------------------------------
+#Utility functions
+#-----------------------------------
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
+
+notes() {
+  if [ ! -z "$1" ]; then
+    # Using the "$@" here will take all parameters passed into
+    # this function so we can place everything into our file.
+    echo "$@" >> "$HOME/Documents/notes.md"
+  else
+    # If no arguments were passed we will take stdin and place
+    # it into our notes instead.
+    cat - >> "$HOME/Documents/notes.md"
+  fi
+}
