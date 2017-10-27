@@ -145,7 +145,7 @@ bindkey -e
 #alias's
 #-----------------------------------
 # Global
-alias ls='ls --color=auto'
+alias ls='ls --color=auto -F'
 alias pacman='pacman --color=auto'
 
 # extention based
