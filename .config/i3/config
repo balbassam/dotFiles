@@ -192,6 +192,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightnes
 
 # Startup programs
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id libinput-gestures
 exec feh --bg-fill ~/.config/i3/Wallpaper.jpg
 exec --no-startup-id dropbox start
 
