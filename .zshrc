@@ -4,7 +4,8 @@ promptinit
 colors
 setopt prompt_subst
 
-
+#use emacs style key navigation
+bindkey -e
 
 zmodload zsh/complist zsh/terminfo
 
@@ -137,9 +138,6 @@ bindkey -M menuselect 'j' vi-down-line-or-history # bottom
 
 # Enable backwards tab using shift-tab
 bindkey -M menuselect '^[[Z' reverse-menu-complete
-
-#use emacs style key navigation
-bindkey -e
 
 #-----------------------------------
 #alias's
