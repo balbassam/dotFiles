@@ -169,7 +169,7 @@ bar {
 		}
         # placement of the i3bar
         position top
-        status_command      i3status -c ~/.i3status.conf
+        status_command      i3status
         workspace_buttons   yes
         tray_output         primary
 
