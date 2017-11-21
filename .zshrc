@@ -146,6 +146,10 @@ bindkey -M menuselect '^[[Z' reverse-menu-complete
 alias ls='ls --color=auto -F'
 alias pacman='pacman --color=auto'
 
+if [[ -s "${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh" ]]; then
+    export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
+done
+
 # extention based
 alias -s c=vim
 
