@@ -11,12 +11,6 @@ call pathogen#helptags()
 call pathogen#infect()
 filetype plugin indent on
 
-" Stuff for vimLatex
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor = "latex"
-let g:Tex_DefaultTargetFormat="pdf"
-let g:Tex_MultipleCompileFormats="pdf"
-
 " enable syntax highlighting
 syntax enable
 
