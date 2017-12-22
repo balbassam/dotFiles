@@ -12,6 +12,8 @@ general {
 }
 
 order += "disk /"
+order += "disk /var"
+order += "disk /home"
 order += "path_exists VPN"
 order += "run_watch DHCP"
 order += "wireless _first_"
@@ -30,7 +32,7 @@ wireless _first_ {
 }
 
 ethernet _first_ {
-        # if you use %speed, i3status requires cap_net_admin capability
+# if you use %speed, i3status requires cap_net_admin capability
         format_up = "E: %ip (%speed)"
         format_down = "E: down"
 }
@@ -70,7 +72,7 @@ run_watch DHCP {
 }
 
 path_exists VPN {
-     path = "/proc/sys/net/ipv4/conf/tun0"
+        path = "/proc/sys/net/ipv4/conf/tun0"
 }
 
 tztime local {
@@ -87,7 +89,19 @@ load {
 }
 
 disk "/" {
-        format = "%free (%avail) / %total"
+        format = "root: %free (%avail) / %total"
+        threshold_type = percentage_avail
+        low_threshold = 10
+}
+
+disk "/home" {
+        format = "home: %free (%avail) / %total"
+        threshold_type = percentage_avail
+        low_threshold = 10
+}
+
+disk "/var" {
+        format = "var: %free (%avail) / %total"
         threshold_type = percentage_avail
         low_threshold = 10
 }
