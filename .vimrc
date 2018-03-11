@@ -48,6 +48,7 @@ set shiftround                  " use multiple of shiftwidth when indenting with
 set number                      " always show line numbers
 set relativenumber              " relative line numbers on the left
 set showmatch                   " set show matching parenthesis
+set matchtime=5                 " Show matching brackets for 0.5 seconds
 set ignorecase                  " ignore case when searching
 set smartcase                   " ignore case if search pattern is all lowercase,
                                 "    case-sensitive otherwise
@@ -72,8 +73,8 @@ set undolevels=1000             " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set title                       " change the terminal's title
 set ls=2                         "Show filename at bottom
-"match ErrorMsg '\s\+$'          " Show trailing whitespace
-set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+set showbreak=↪\ 
+set listchars=tab:│·,trail:·,eol:↲,nbsp:␣,extends:›,precedes:‹
 set list
 
 " better menu autocompletion
