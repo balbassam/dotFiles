@@ -99,7 +99,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 #
 # Shutdown, reboot, and lock
-set $Locker i3lock -t -i .config/i3/lockscreen.png && sleep 1
+set $Locker i3lock -p win -t -i .config/i3/lockscreen.png && sleep 1
 
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
@@ -157,20 +157,26 @@ font pango: Century Gothic 8
 hide_edge_borders both
 new_window pixel
 
+# i3 gaps configs
+smart_gaps on
+smart_borders on
+gaps inner 2
+gaps outer  0
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	colors {
-		# Whole color settings
-		background #232323
-		statusline #DCDCDC
-		separator  #666666
+    colors {
+        # Whole color settings
+        background #232323
+        statusline #DCDCDC
+        separator  #666666
         # Type             border  background font
-		focused_workspace  #008fff #007fff #ffffff
-		active_workspace   #333333 #5f676a #ffffff
-		inactive_workspace #333333 #222222 #888888
-		urgent_workspace   #aa0000 #990000 #ffffff
-		}
+        focused_workspace  #008fff #007fff #ffffff
+        active_workspace   #333333 #5f676a #ffffff
+        inactive_workspace #333333 #222222 #888888
+        urgent_workspace   #aa0000 #990000 #ffffff
+        }
         # placement of the i3bar
         position top
         status_command      i3status
@@ -195,7 +201,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Startup programs
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id libinput-gestures
 exec feh --bg-fill ~/.config/i3/Wallpaper.jpg
 exec --no-startup-id dropbox start
