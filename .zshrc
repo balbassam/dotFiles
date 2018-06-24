@@ -147,11 +147,7 @@ alias ls='ls --color=auto -F'
 alias pacman='pacman --color=auto'
 alias gdb='gdb -q'
 
-if [[ -S "${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh" ]]; then
-    export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
-fi
-
-# extention based
+# extension based
 alias -s c=vim
 
 #Stop sudo from being corrected
