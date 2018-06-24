@@ -10,7 +10,7 @@ Xft.hintstyle:              hintslight
 URxvt.depth:                32
 URxvt.geometry:             90x30
 ! URxvt.transparent:          false
-URxvt.fading:               0
+URxvt.fading:               20
 URxvt.urgentOnBell:         true
 URxvt.visualBell:           true
 URxvt.loginShell:           true
@@ -131,8 +131,13 @@ URxvt.scrollBar:            false
 
 ! Perl extensions
 URxvt.perl-ext-common:      default,matcher,clipboard,resize-font
-URxvt.matcher.button:       1
+
+! Launching URLs
 URxvt.url-launcher:         /usr/bin/xdg-open
+URxvt.matcher.button:       1
+! Launching via keyboard
+URxvt.keysym.C-Delete:      perl:matcher:last
+URxvt.keysym.M-Delete:      perl:matcher:list
 
 ! Cursor
 URxvt.cursorBlink:          true
