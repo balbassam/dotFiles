@@ -18,7 +18,7 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
-[bar/bar1]
+[bar/top]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 20
@@ -45,10 +45,11 @@ module-margin-right = 2
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
+font-3 = Wuncon Siji
 
 modules-left = i3
 modules-center = xwindow
-modules-right = filesystem xbacklight volume memory cpu wlan eth battery temperature date powermenu
+modules-right = filesystem xbacklight volume memory cpu vpn wlan eth battery temperature date
 
 tray-position = right
 tray-padding = 2
@@ -174,7 +175,7 @@ type = internal/xbacklight
 format = <label> <bar>
 label = BL
 
-bar-width = 10
+bar-width = 5
 bar-indicator = |
 bar-indicator-foreground = #ff
 bar-indicator-font = 2
@@ -264,14 +265,14 @@ label = %date% %time%
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+;label-volume = VOL
 label-volume-foreground = ${root.foreground}
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
+label-muted = muted
 
-bar-volume-width = 10
+bar-volume-width = 5
 bar-volume-foreground-0 = #55aa55
 bar-volume-foreground-1 = #55aa55
 bar-volume-foreground-2 = #55aa55
@@ -333,6 +334,15 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
+
+[module/vpn]
+type = custom/script
+exec = echo vpn
+exec-if = pgrep -x openvpn
+interval = 5
+format-underline = #268bd2
+format-prefix = "🖧 "
+format-prefix-foreground = #5b
 
 [module/powermenu]
 type = custom/menu
