@@ -5,6 +5,7 @@ Xft.dpi:                    96
 Xft.antialias:              true
 Xft.rgba:                   rgb
 Xft.hinting:                true
+Xft.lcdfilter:              lcdlight
 Xft.hintstyle:              hintslight
 
 URxvt.depth:                32
@@ -14,7 +15,7 @@ URxvt.fading:               20
 URxvt.urgentOnBell:         true
 URxvt.visualBell:           true
 URxvt.loginShell:           true
-URxvt.termName:             xterm-256color
+URxvt.termName:             rxvt-256color
 URxvt.saveLines:            3000
 URxvt.internalBorder:       3
 URxvt.lineSpace:            0
@@ -26,10 +27,15 @@ URxvt*keysym.End:           \033[4~
 URxvt.allow_bold:           true
 ! Search multiple fonts to allow for unicode glyphs
 URxvt*font:                 xft:Hack:size=8:antialias=true,\
+                            xft:WunconSiji:size=8,
                             xft:Unifont:style=Medium:antialias=true,\
                             xft:Symbola,\
                             xft:FreeSerif:style=Regular,\
                             xft:WenQuanYi Bitmap Song:size=8,\
+
+urxvt.boldFont:             xft:Hack:size=8:style=Bold:antialias=true,
+
+urxvt.italicFont:           xft:Hack:size=8:style=Italic:antialias=true,\
 
 !-------------------------------------------------------------------------------
 ! Color settings
