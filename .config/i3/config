@@ -157,11 +157,11 @@ font pango: Century Gothic 8
 hide_edge_borders both
 new_window pixel
 
-# i3 gaps configs
+# i3-gaps configs
 smart_gaps on
 smart_borders on
 gaps inner 2
-gaps outer  0
+gaps outer 0
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -197,14 +197,15 @@ bindsym XF86AudioMute           exec  pactl set-sink-mute 0 toggle # mute sound
 bindsym XF86AudioMicMute        exec  pactl set-source-mute 1 toggle # mute sound
 #
 ## Screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 2 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 2 # decrease screen brightness
+bindsym XF86MonBrightnessUp     exec xbacklight -inc 2 # increase screen brightness
+bindsym XF86MonBrightnessDown   exec xbacklight -dec 2 # decrease screen brightness
 
 # Startup programs
 # exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id libinput-gestures
 exec feh --bg-fill ~/.config/i3/Wallpaper.jpg
-exec --no-startup-id dropbox start
+# exec --no-startup-id dropbox start
+exec --no-startup-id xss-lock $Locker
 
 # color setup
 # Class                 Border  backgr. text    indicator   child_border
