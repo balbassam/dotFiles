@@ -27,15 +27,14 @@ URxvt*keysym.End:           \033[4~
 URxvt.allow_bold:           true
 ! Search multiple fonts to allow for unicode glyphs
 URxvt*font:                 xft:Hack:size=8:antialias=true,\
-                            xft:WunconSiji:size=8,
+                            xft:WunconSiji:size=8,\
+                            xft:Siji:size=8,\
                             xft:Unifont:style=Medium:antialias=true,\
                             xft:Symbola,\
                             xft:FreeSerif:style=Regular,\
-                            xft:WenQuanYi Bitmap Song:size=8,\
-
+                            xft:WenQuanYi Bitmap Song:size=8,
 urxvt.boldFont:             xft:Hack:size=8:style=Bold:antialias=true,
-
-urxvt.italicFont:           xft:Hack:size=8:style=Italic:antialias=true,\
+urxvt.italicFont:           xft:Hack:size=8:style=Italic:antialias=true,
 
 !-------------------------------------------------------------------------------
 ! Color settings
