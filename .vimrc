@@ -73,9 +73,14 @@ set undolevels=1000             " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set title                       " change the terminal's title
 set ls=2                         "Show filename at bottom
+
+" Showing trailing and non-printable characters
 set showbreak=↪\ 
 set listchars=tab:│·,trail:·,eol:↲,nbsp:␣,extends:›,precedes:‹
 set list
+" TODO Add colors for guifg
+hi SpecialKey ctermfg=0
+hi NonText ctermfg=0
 
 " better menu autocompletion
 set wildmenu
