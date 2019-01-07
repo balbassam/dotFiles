@@ -3,13 +3,19 @@
 " PUT THIS FIRST
 set nocompatible
 
-" Use pathogen to easily modify the runtime path to include all
-" plugins under the ~/.vim/bundle directory
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-filetype off
-execute pathogen#helptags()
-execute pathogen#infect()
-filetype plugin indent on
+" Load vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+   execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
+
+" Start Plugins
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-fugitive'
+Plug 'altercation/vim-colors-solarized'
+Plug 'junegunn/vim-plug'
+Plug 'sheerum/vim-polyglot'
+call plug#end()
+" End Plugins
 
 " enable syntax highlighting
 syntax enable
@@ -25,12 +31,8 @@ let g:solarized_termtrans=1
 let g:solarized_visibility="high"
 colorscheme solarized
 
-" For arduino syntax!
-autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
-
 " hide buffers without having to write on undo changes first
 set hidden
-
 set wrap                        " do wrap lines
 set backspace=indent,eol,start
                                 " allow backspacing over everything in insert mode
@@ -39,7 +41,7 @@ set shiftwidth=4                " number of spaces to use for autoindenting
 set tabstop=4                   " a tab is four spaces
 set autoindent                  " always set autoindenting on
 set cindent                     " indents for C like files
-set copyindent                  " copy the previous indentation on autoindenting
+set copyindent                  " copy the previous indentation on autoindent
 set smarttab                    " insert tabs on the start of a line according to
                                 "    shiftwidth, not tabstop
 set expandtab                   " Expand tabs into spaces
@@ -73,6 +75,7 @@ set undolevels=1000             " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set title                       " change the terminal's title
 set ls=2                         "Show filename at bottom
+set wildmenu                    " better menu autocompletion
 
 " Showing trailing and non-printable characters
 set showbreak=↪\ 
@@ -82,8 +85,7 @@ set list
 hi SpecialKey ctermfg=0
 hi NonText ctermfg=0
 
-" better menu autocompletion
-set wildmenu
+
 
 " for gods sake we have git now
 set nobackup
