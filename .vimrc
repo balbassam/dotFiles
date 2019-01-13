@@ -13,7 +13,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/vim-plug'
-Plug 'sheerum/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 " End Plugins
 
