@@ -45,6 +45,7 @@ set matchtime=5                 " Show matching brackets for 0.5 seconds
 set ignorecase                  " ignore case when searching
 set smartcase                   " ignore case iff search pattern is lowercase
 set cursorline                  " hightlights current cursor"
+set cursorcolumn                " Useful for testing indenting alignment quick
 set colorcolumn=80              " vertical line at the 80 char position
 set scrolloff=4                 " keep 4 lines off the screen edgeson scrolling
 set hlsearch                    " highlight search terms
