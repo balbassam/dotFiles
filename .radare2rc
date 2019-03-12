@@ -1,7 +1,3 @@
-# http://blog.dutchcoders.io/getting-started-with-radare2/
-# Show comments at right of disassembly if they fit in screen
-# e asm.cmtright=true
-
 # Display stack and register values on top of disasembly view (visual mode)
 e cmd.stack = true
 
