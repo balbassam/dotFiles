@@ -35,6 +35,7 @@ URxvt*font:                 xft:Hack:size=8:antialias=true,\
                             xft:WenQuanYi Bitmap Song:size=8,
 urxvt.boldFont:             xft:Hack:size=8:style=Bold:antialias=true,
 urxvt.italicFont:           xft:Hack:size=8:style=Italic:antialias=true,
+urxvt.boldItalicFont:       xft:Hack:size=8:style=Bold Italic:antialias=true,
 
 !-------------------------------------------------------------------------------
 ! Color settings
