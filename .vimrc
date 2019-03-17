@@ -44,7 +44,7 @@ set showmatch                   " set show matching parenthesis
 set matchtime=5                 " Show matching brackets for 0.5 seconds
 set ignorecase                  " ignore case when searching
 set smartcase                   " ignore case iff search pattern is lowercase
-set cursorline                  " hightlights current cursor"
+set cursorline                  " hightlights current cursor
 set cursorcolumn                " Useful for testing indenting alignment quick
 set colorcolumn=80              " vertical line at the 80 char position
 set scrolloff=4                 " keep 4 lines off the screen edgeson scrolling
@@ -57,7 +57,7 @@ set history=1000                " remember more commands and search history
 set undolevels=1000             " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set title                       " change the terminal's title
-set ls=2                         "Show filename at bottom
+set ls=2                        " Show filename at bottom
 set wildmenu                    " better menu autocompletion
 
 let t_ZH="\e3m"
