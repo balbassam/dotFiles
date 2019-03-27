@@ -13,6 +13,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'altercation/vim-colors-solarized'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'junegunn/vim-plug'
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
