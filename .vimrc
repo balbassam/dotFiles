@@ -55,10 +55,10 @@ set fileformats="unix,dos,mac"
 set formatoptions+=1            " When wrapping paragraphs, don't end lines
 set history=1000                " remember more commands and search history
 set undolevels=1000             " use many muchos levels of undo
-set wildignore=*.swp,*.bak,*.pyc,*.class
 set title                       " change the terminal's title
 set ls=2                        " Show filename at bottom
 set wildmenu                    " better menu autocompletion
+set wildignore=*.swp,*.bak,*.pyc,*.class
 
 let t_ZH="\e3m"
 let t_ZR="\[23m"
