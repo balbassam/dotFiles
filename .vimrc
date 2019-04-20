@@ -11,10 +11,10 @@ endif
 
 " Start Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-fugitive'
-Plug 'altercation/vim-colors-solarized'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'junegunn/vim-plug'
+Plug 'junegunn/vim-plug' " Plugin manager
+Plug 'tpope/vim-fugitive'   " Git Wrapper
+Plug 'altercation/vim-colors-solarized' " Color theme
+Plug 'dracula/vim', { 'as': 'dracula' } " Backup theme
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 call plug#end()
