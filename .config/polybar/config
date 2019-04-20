@@ -34,7 +34,7 @@ module-margin-right = 1
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
-font-3 = Wuncon Siji
+font-3 = WunconSiji
 modules-left = i3
 modules-center =
 modules-right = filesystem xbacklight volume vpn wlan eth memory cpu cpufreq temperature battery date
@@ -279,8 +279,8 @@ format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
-label = %temperature%
-label-warn = %temperature%
+label = %temperature-c%
+label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
 ramp-0 = 
