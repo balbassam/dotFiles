@@ -3,6 +3,9 @@ e cmd.stack = true
 
 # Solarized theme
 eco solarized
+# 256 color support
+e scr.color=2
+
 
 # Enabled pager for scrolling
 e scr.pager=less -R
