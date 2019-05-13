@@ -39,12 +39,16 @@ set smarttab                    " insert tabs on the start of a line according
                                 "   to shiftwidth, not tabstop
 set expandtab                   " Expand tabs into spaces
 set shiftround                  " use multiple of shiftwidth when indenting with '<'or'>'
+
 set number                      " always show line numbers
 set relativenumber              " relative line numbers on the left
+
 set showmatch                   " set show matching parenthesis
 set matchtime=5                 " Show matching brackets for 0.5 seconds
+
 set ignorecase                  " ignore case when searching
 set smartcase                   " ignore case iff search pattern is lowercase
+
 set cursorline                  " hightlights current cursor
 set cursorcolumn                " Useful for testing indenting alignment quick
 set colorcolumn=80              " vertical line at the 80 char position
@@ -61,6 +65,7 @@ set ls=2                        " Show filename at bottom
 set wildmenu                    " better menu autocompletion
 set wildignore=*.swp,*.bak,*.pyc,*.class
 
+" italic comments
 let t_ZH="\e3m"
 let t_ZR="\[23m"
 highlight Comment cterm=italic
@@ -68,6 +73,7 @@ highlight Comment cterm=italic
 " Showing trailing and non-printable characters
 set showbreak=↪\ 
 set listchars=tab:│·,trail:·,eol:↲,nbsp:␣,extends:›,precedes:‹
+
 set list
 " TODO Add colors for guifg
 hi SpecialKey ctermfg=0
