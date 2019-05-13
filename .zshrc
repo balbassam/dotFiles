@@ -87,8 +87,8 @@ bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 # ctrl+j and ctrl+k search forward and back through history with the contents of
 # the current line up till the cursor
-bindkey '^K' history-beginning-search-backward
-bindkey '^J' history-beginning-search-forward
+# bindkey '^K' history-beginning-search-backward
+# bindkey '^J' history-beginning-search-forward
 
 # Enable home and end keys
 bindkey "^[[1~" beginning-of-line
