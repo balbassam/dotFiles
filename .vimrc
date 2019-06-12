@@ -13,18 +13,32 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug' " Plugin manager
 Plug 'tpope/vim-fugitive'   " Git Wrapper
-Plug 'altercation/vim-colors-solarized' " Color theme
-Plug 'dracula/vim', { 'as': 'dracula' } " Backup theme
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
+Plug 'chriskempson/base16-vim', {'do': 'git checkout dict_fix'}
 call plug#end()
 " End Plugins
+
+" Using base16-shell for color theme managment
+if filereadable(expand("~/.vim/colorscheme.vim"))
+  let base16colorspace=256
+  source ~/.vim/colorscheme.vim
+endif
+
+function! s:base16_customize() abort
+  " Arguments: group, guifg, guibg, ctermfg, ctermbg, attr, guisp
+  call Base16hi("MatchParen", g:base16_gui05, g:base16_gui03, g:base16_cterm05, g:base16_cterm03, "bold,italic", "")
+  call Base16hi("Comment" , "", "", "", "", "italic", "")
+endfunction
+
+augroup on_change_colorschema
+  autocmd!
+  autocmd ColorScheme * call s:base16_customize()
+augroup END
 
 syntax enable                   " enable syntax highlighting
 set foldmethod=syntax           " enable folding (wrapping text)
 
-set background=dark             " I like dark themes so...
-colorscheme solarized           " Found this colorscheme and I liked it.
 " hide buffers without having to write on undo changes first
 set hidden
 set wrap                        " do wrap lines by default
@@ -65,19 +79,10 @@ set ls=2                        " Show filename at bottom
 set wildmenu                    " better menu autocompletion
 set wildignore=*.swp,*.bak,*.pyc,*.class
 
-" italic comments
-let t_ZH="\e3m"
-let t_ZR="\[23m"
-highlight Comment cterm=italic
-
 " Showing trailing and non-printable characters
 set showbreak=↪\ 
 set listchars=tab:│·,trail:·,eol:↲,nbsp:␣,extends:›,precedes:‹
-
 set list
-" TODO Add colors for guifg
-hi SpecialKey ctermfg=0
-hi NonText ctermfg=0
 
 " for gods sake we have git now
 set nobackup

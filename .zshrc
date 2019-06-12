@@ -29,6 +29,11 @@ PR_NO_COLOR="%{$terminfo[sgr0]%}"
 # symlink to the correct file in dotFiles/dircolors-solarized
 eval `dircolors ~/.dircolors`
 
+# Base16 Shell
+BASE16_SHELL="$HOME/.base16-manager/chriskempson/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 #-----------------------------------
 # version control in prompt
