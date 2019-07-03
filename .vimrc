@@ -13,12 +13,14 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug' " Plugin manager
 Plug 'tpope/vim-fugitive'   " Git Wrapper
+Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
-Plug 'chriskempson/base16-vim', {'do': 'git checkout dict_fix'}
+Plug 'chriskempson/base16-vim'
 call plug#end()
 " End Plugins
 
+""" Base16 customizations
 " Using base16-shell for color theme managment
 if filereadable(expand("~/.vim/colorscheme.vim"))
   let base16colorspace=256
@@ -29,12 +31,19 @@ function! s:base16_customize() abort
   " Arguments: group, guifg, guibg, ctermfg, ctermbg, attr, guisp
   call Base16hi("MatchParen", g:base16_gui05, g:base16_gui03, g:base16_cterm05, g:base16_cterm03, "bold,italic", "")
   call Base16hi("Comment" , "", "", "", "", "italic", "")
+  call Base16hi("SpellBad" , "", "", "", "none", "bold,underline", "")
+  call Base16hi("SpellCap" , "", "", "", "none", "bold,undercurl", "")
 endfunction
+
+" undercurl support
+let &t_Cs = "\e[4:3m"
+let &t_Ce = "\e[4:0m"
 
 augroup on_change_colorschema
   autocmd!
   autocmd ColorScheme * call s:base16_customize()
 augroup END
+""" End Base16 Customizations
 
 syntax enable                   " enable syntax highlighting
 set foldmethod=syntax           " enable folding (wrapping text)
@@ -83,6 +92,45 @@ set wildignore=*.swp,*.bak,*.pyc,*.class
 set showbreak=↪\ 
 set listchars=tab:│·,trail:·,eol:↲,nbsp:␣,extends:›,precedes:‹
 set list
+
+"" cool binds
+map <leader>h :noh<CR>
+
+""" vim ALE stuff"""
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+""" End Vim Ale
+
+""" vim coc stuff
+" always show signcolumns
+set signcolumn=yes
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+""" End vim coc
 
 " for gods sake we have git now
 set nobackup
