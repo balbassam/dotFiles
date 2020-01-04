@@ -1,0 +1,26 @@
+MOZ_ENABLE_WAYLAND=1
+
+###Backends
+#
+#This may cause crashes
+#GTK
+#GDK_BACKEND=wayland
+#export CLUTTER_BACKEND=wayland
+
+#Qt (should use wayland by default)
+#export QT_QPA_PLATFORM=xcb
+#QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+
+#SDL
+#export SDL_VIDEODRIVER=wayland
+
+#Java
+_JAVA_AWT_WM_NONREPARENTING=1
+
+### Theming
+#
+# export QT_QPA_PLATFORMTHEME="qt5ct"
+# 
+# gsettings set org.gnome.desktop.interface cursor-theme capitaine-cursors
+# gsettings set org.gnome.desktop.interface icon-theme la-capitaine-icon-theme
+# gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
