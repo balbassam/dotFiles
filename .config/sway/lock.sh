@@ -12,7 +12,7 @@ done
 
 #printf '%s\n' "${images[@]}" | xargs -P 0 -I{} convert -blur 0x8 {} {}
 for image in ${images[@]}; do
-    corrupter -mag 6 -boffset 35 ${images} ${image}
+    corrupter -mag 6 -boffset 35 ${image} ${image}
 done
 
 swaylock ${swaylock_args[@]} -s center -f
