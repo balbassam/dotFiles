@@ -17,6 +17,7 @@ Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 Plug 'chriskempson/base16-vim'
+Plug 'kien/ctrlp.vim'
 call plug#end()
 " End Plugins
 
