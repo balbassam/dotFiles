@@ -1,14 +1,14 @@
 swipe:
   3:
     left:
-      command: 'xdotool key alt+Right'
+      command: 'ydotool key alt+Right'
     right:
-      command: 'xdotool key alt+Left'
+      command: 'ydotool key alt+Left'
     up:
-      command: 'xdotool key ctrl+shift+t'
+      command: 'ydotool key ctrl+shift+t'
       threshold: 1.5
     down:
-      command: 'xdotool key ctrl+w'
+      command: 'ydotool key ctrl+w'
       threshold: 1.5
   4:
     left:
@@ -16,16 +16,16 @@ swipe:
     right:
       command: 'i3-msg workspace next'
     up:
-      command: 'xdotool key super+a'
+      command: 'ydotool key super+a'
     down:
-      command: 'i3lock -t -i ~/.config/i3/lockscreen.png && sleep 1'
+      command: '~/.config/i3/lock.sh'
 pinch:
   2:
     in:
-      command: 'xdotool key ctrl+plus'
+      command: 'ydotool key ctrl+plus'
       threshold: 0.1
     out:
-      command: 'xdotool key ctrl+minus'
+      command: 'ydotool key ctrl+minus'
       threshold: 0.1
 
 threshold:
