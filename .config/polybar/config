@@ -37,7 +37,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center =
-modules-right = filesystem xbacklight volume vpn wlan eth memory cpu cpufreq temperature date battery-combined-udev
+modules-right = filesystem xbacklight volume vpn wlan eth memory cpu cpufreq temperature date
 tray-position = right
 tray-padding = 1
 
@@ -66,8 +66,6 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-mount-1 = /home
-mount-2 = /var
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
