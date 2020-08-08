@@ -108,14 +108,13 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 #
 # Shutdown, reboot, and lock
-set $Locker i3lock -p win -t -i .config/i3/lockscreen.png && sleep 1
-
+set $Locker ~/.config/i3/lock.sh
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend-then-hibernate, mode "default"
     bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
@@ -210,14 +209,8 @@ bindsym XF86MonBrightnessUp     exec xbacklight -inc 2 # increase screen brightn
 bindsym XF86MonBrightnessDown   exec xbacklight -dec 2 # decrease screen brightness
 
 # Startup programs
-# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id fusuma -d
-exec --no-startup-id compton -b
 exec_always feh --bg-fill ~/.config/i3/Wallpaper.jpg
-exec --no-startup-id dropbox start
-exec --no-startup-id xss-lock  -- $Locker
-exec --no-startup-id blueman-applet
-exec --no-startup-id dunst
+exec --no-startup-id xss-lock -- $Locker
 
 # color setup
 # Class                 Border  backgr. text    indicator   child_border

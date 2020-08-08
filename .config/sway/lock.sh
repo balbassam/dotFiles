@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export SWAYSOCK=/run/user/$(id -u)/sway-ipc.$(id -u).$(pgrep -x sway).sock
+
 images=()
 swaylock_args=()
 
@@ -11,7 +13,9 @@ for output in $(swaymsg -t get_outputs | jq -r '.[] .name'); do
 done
 
 #printf '%s\n' "${images[@]}" | xargs -P 0 -I{} convert -blur 0x8 {} {}
-corrupter -mag 2 -boffset 35 ${images[@]} ${images[@]}
+for image in ${images[@]}; do
+    corrupter -mag 6 -boffset 35 ${image} ${image}
+done
 
-swaylock ${swaylock_args[@]} -s center
+swaylock ${swaylock_args[@]} -s center -f
 rm ${images[@]}

@@ -17,6 +17,7 @@ Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 Plug 'chriskempson/base16-vim'
+Plug 'kien/ctrlp.vim'
 call plug#end()
 " End Plugins
 
@@ -126,13 +127,6 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
-
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
