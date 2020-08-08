@@ -4,8 +4,7 @@ set disassembly-flavor intel
 set print asm-demangle on
 
 # Using nicer interface
-# source /usr/share/peda/peda.py
 source /usr/share/gef/gef.py
+gef config context.clear_screen false
+
 # Workount a GDB regression: https://github.com/hugsy/gef/issues/387
-gef config gef.debug true
-# source /usr/share/pwndbg/gdbinit.py # Once this gets fixes, it will replace the aboves
