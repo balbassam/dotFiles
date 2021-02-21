@@ -32,11 +32,15 @@ module-margin-right = 1
 ; wm-restack = i3
 ; override-redirect = false
 font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-1 = "Symbola:size=11;1"
+font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-3 = siji:pixelsize=10;1
+font-4 = FontAwesome:pixelsize=14;0
+font-5 = "Tamsyn:pixelsize=12;0"
+font-6 = "Roboto:size=11:weight=bold;2"
 
 modules-left = i3
-modules-center =
+modules-center = mpd
 modules-right = filesystem xbacklight volume vpn wlan eth memory cpu cpufreq temperature date
 tray-position = right
 tray-padding = 1
@@ -109,15 +113,32 @@ label-urgent-padding = 2
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+; format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+; Only applies if <icon-X> is used
+icon-play = ⏵
+icon-pause = ⏸
+icon-stop = ⏹
+icon-prev = ⏮
+icon-next = ⏭
+icon-seekb = ⏪
+icon-seekf = ⏩
+; TODO find fonts
+icon-random = 🔀
+icon-repeat = 🔁
+icon-repeatone = 🔂
+icon-single = 🔂
+icon-consume = ✀
 
-label-song-maxlen = 25
+; Only applies if <bar-progress> is used
+bar-progress-width = 20
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
+
+label-song =🎜 %album-artist% - %title%
+label-song-maxlen = 45
 label-song-ellipsis = true
 
 [module/xbacklight]
