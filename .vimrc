@@ -13,9 +13,9 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug' " Plugin manager
 Plug 'tpope/vim-fugitive'   " Git Wrapper
-Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'chriskempson/base16-vim'
 Plug 'kien/ctrlp.vim'
 call plug#end()
@@ -98,6 +98,7 @@ set list
 map <leader>h :noh<CR>
 
 """ vim ALE stuff"""
+let g:ale_disable_lsp = 1 " make ale work better with coc
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 """ End Vim Ale
