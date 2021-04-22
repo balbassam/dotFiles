@@ -47,7 +47,6 @@ augroup END
 """ End Base16 Customizations
 
 syntax enable                   " enable syntax highlighting
-set foldmethod=syntax           " enable folding (wrapping text)
 
 " hide buffers without having to write on undo changes first
 set hidden
@@ -101,6 +100,8 @@ map <leader>h :noh<CR>
 let g:ale_disable_lsp = 1 " make ale work better with coc
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
 """ End Vim Ale
 
 """ vim coc stuff
