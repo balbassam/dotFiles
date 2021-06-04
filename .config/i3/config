@@ -205,11 +205,11 @@ bindsym XF86AudioMute           exec  pactl set-sink-mute 0 toggle # mute sound
 bindsym XF86AudioMicMute        exec  pactl set-source-mute 1 toggle # mute sound
 #
 ## Screen brightness controls
-bindsym XF86MonBrightnessUp     exec xbacklight -inc 2 # increase screen brightness
-bindsym XF86MonBrightnessDown   exec xbacklight -dec 2 # decrease screen brightness
+bindsym XF86MonBrightnessUp     exec light -A 2 # increase screen brightness
+bindsym XF86MonBrightnessDown   exec light -U 2 # decrease screen brightness
 
 # Startup programs
-exec_always feh --bg-fill ~/.config/i3/Wallpaper.jpg
+exec_always feh --bg-fill ~/.config/i3/Wallpaper.png
 exec --no-startup-id xss-lock -- $Locker
 
 # color setup
