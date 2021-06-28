@@ -16,34 +16,34 @@ Plug 'tpope/vim-fugitive'   " Git Wrapper
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'dense-analysis/ale'
-Plug 'chriskempson/base16-vim'
 Plug 'kien/ctrlp.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 " End Plugins
 
-""" Base16 customizations
-" Using base16-shell for color theme managment
-if filereadable(expand("~/.vim/colorscheme.vim"))
-  let base16colorspace=256
-  source ~/.vim/colorscheme.vim
-endif
-
-function! s:base16_customize() abort
-  " Arguments: group, guifg, guibg, ctermfg, ctermbg, attr, guisp
-  call Base16hi("MatchParen", g:base16_gui05, g:base16_gui03, g:base16_cterm05, g:base16_cterm03, "bold,italic", "")
-  call Base16hi("Comment" , "", "", "", "", "italic", "")
-  call Base16hi("SpellBad" , "", "", "", "none", "bold,underline", "")
-  call Base16hi("SpellCap" , "", "", "", "none", "bold,undercurl", "")
-endfunction
+" """ Base16 customizations
+" " Using base16-shell for color theme managment
+" if filereadable(expand("~/.vim/colorscheme.vim"))
+"   let base16colorspace=256
+"   source ~/.vim/colorscheme.vim
+" endif
+" 
+" function! s:base16_customize() abort
+"   " Arguments: group, guifg, guibg, ctermfg, ctermbg, attr, guisp
+"   call Base16hi("MatchParen", g:base16_gui05, g:base16_gui03, g:base16_cterm05, g:base16_cterm03, "bold,italic", "")
+"   call Base16hi("Comment" , "", "", "", "", "italic", "")
+"   call Base16hi("SpellBad" , "", "", "", "none", "bold,underline", "")
+"   call Base16hi("SpellCap" , "", "", "", "none", "bold,undercurl", "")
+" endfunction
 
 " undercurl support
 let &t_Cs = "\e[4:3m"
 let &t_Ce = "\e[4:0m"
 
-augroup on_change_colorschema
-  autocmd!
-  autocmd ColorScheme * call s:base16_customize()
-augroup END
+" augroup on_change_colorschema
+"   autocmd!
+"   autocmd ColorScheme * call s:base16_customize()
+" augroup END
 """ End Base16 Customizations
 
 syntax enable                   " enable syntax highlighting
@@ -74,7 +74,9 @@ set smartcase                   " ignore case iff search pattern is lowercase
 
 set cursorline                  " hightlights current cursor
 set cursorcolumn                " Useful for testing indenting alignment quick
+highlight CursorColumn ctermbg=0
 set colorcolumn=80              " vertical line at the 80 char position
+highlight ColorColumn ctermbg=0
 set scrolloff=4                 " keep 4 lines off the screen edgeson scrolling
 set hlsearch                    " highlight search terms
 set incsearch                   " show search matches as you type
@@ -100,8 +102,8 @@ map <leader>h :noh<CR>
 let g:ale_disable_lsp = 1 " make ale work better with coc
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-let g:ale_sign_error = '❌'
-let g:ale_sign_warning = '⚠️'
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '.'
 """ End Vim Ale
 
 """ vim coc stuff
