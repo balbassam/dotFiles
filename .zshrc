@@ -82,8 +82,8 @@ setprompt
 # History settings
 #-----------------------------------
 #Save lots and use a single file
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=1000000000
+SAVEHIST=1000000000
 HISTFILE=~/.history
 # append all history into the shared file ignoring space and duplicates
 setopt append_history share_history histignorealldups histignorespace
