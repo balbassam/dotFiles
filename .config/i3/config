@@ -221,6 +221,12 @@ bindsym --release Print exec gnome-screenshot -i
 # Startup programs
 exec_always feh --bg-fill ~/.config/i3/Wallpaper.jpg
 exec --no-startup-id xss-lock -- $Locker
+exec --no-startup-id xsetwacom set "Wacom Intuos S Pen stylus" MapToOutput DisplayPort-0
+exec --no-startup-id dunst
+
+# Need to import environments to get multiple things to work.
+# e.g. yubikey on keepass and element-desktop
+exec "systemctl --user import-environment; systemctl --user start graphical-session.target"
 
 # color setup
 # Class                 Border  backgr. text    indicator   child_border
