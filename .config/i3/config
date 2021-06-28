@@ -197,6 +197,10 @@ gaps outer 0
 #}
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# Notifications
+bindsym $mod+escape exec dunstctl close
+bindsym $mod+Shift+escape exec dunstctl close-all
+
 # Pulse Audio controls
 # https://www.reddit.com/r/i3wm/comments/2wbv8x/question_how_to_manage_audio_with_i3/covp8jl/
 bindsym XF86AudioRaiseVolume    exec  pactl set-sink-volume 0 +1% #increase sound volume
@@ -207,6 +211,12 @@ bindsym XF86AudioMicMute        exec  pactl set-source-mute 1 toggle # mute soun
 ## Screen brightness controls
 bindsym XF86MonBrightnessUp     exec xbacklight -inc 2 # increase screen brightness
 bindsym XF86MonBrightnessDown   exec xbacklight -dec 2 # decrease screen brightness
+bindsym XF86AudioPlay          exec playerctl play-pause
+bindsym XF86AudioNext          exec playerctl next
+bindsym XF86AudioPrev          exec playerctl previous
+
+# Screenshot
+bindsym --release Print exec gnome-screenshot -i
 
 # Startup programs
 exec_always feh --bg-fill ~/.config/i3/Wallpaper.jpg
